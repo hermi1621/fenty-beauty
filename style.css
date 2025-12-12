@@ -1,157 +1,103 @@
-:root{
-  --bg:#fff;
-  --accent:#8c2f7a;
-  --muted:#6b6b6b;
-  --card:#ffffff;
-  --radius:14px;
-  --max-width:1200px;
-  --gap:1.25rem;
-  --shadow: 0 6px 20px rgba(15,15,15,0.08);
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
 *{box-sizing:border-box}
-body{
-  margin:0;
-  background:linear-gradient(180deg,#fff 0%, #fffaf6 100%);
-  color:#111;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-}
 
-/* promo */
-.promo{
-  background:#111;
-  color:#fff;
-  padding:.45rem .75rem;
-  text-align:center;
-  font-size:.92rem;
-}
 
-/* header */
-.site-header{
-  background:transparent;
-  position:sticky;
-  top:0;
-  z-index:30;
-  border-bottom:1px solid rgba(0,0,0,0.04);
-}
-.header-inner{
-  max-width:var(--max-width);
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  gap:1rem;
-  padding:.9rem;
-}
-.logo{
-  font-weight:800;
-  letter-spacing:2px;
-  font-size:1.1rem;
-  color:var(--accent);
-  text-decoration:none;
-}
-.menu-btn{display:none;background:none;border:none;font-size:1.1rem;padding:.25rem}
-.main-nav{display:flex;gap:1rem;margin-left:1rem}
-.main-nav a{color:#222;text-decoration:none;font-weight:500;padding:.35rem .5rem;border-radius:8px}
-.header-actions{margin-left:auto;display:flex;gap:.5rem;align-items:center}
-.icon-btn{background:none;border:1px solid rgba(0,0,0,0.06);padding:.45rem;border-radius:8px}
-.bag{background:var(--accent);color:#fff;border:none;padding:.45rem .6rem;border-radius:8px}
-.bag-count{background:#fff;color:var(--accent);padding:0 .45rem;border-radius:10px;margin-left:.4rem}
 
-/* hero */
-.hero{
-  min-height:54vh;
-  display:flex;
-  align-items:center;
-  background-image: linear-gradient(120deg, rgba(140,47,122,0.12), rgba(255,200,180,0.05)), url('https://via.placeholder.com/1600x800?text=Hero+Image');
-  background-size:cover;
-  background-position:center;
-  padding:3rem 1rem;
-}
-.hero-content{
-  max-width:var(--max-width);
-  margin:0 auto;
-  color:#111;
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
-  padding:2rem;
-  border-radius:16px;
-  box-shadow:var(--shadow);
-}
-.hero h1{font-size:2.1rem;margin:0 0 .5rem;color:var(--accent)}
-.hero p{margin:0 0 1rem;color:var(--muted)}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600}
-.btn-ghost{background:transparent;color:var(--accent);border:1px solid rgba(140,47,122,0.12);margin-left:.5rem}
-.btn.small{padding:.4rem .6rem;font-size:.9rem}
-
-/* offers */
-.offers{max-width:var(--max-width);margin:1.25rem auto;padding:0 1rem}
-.offer-list{display:flex;gap:1rem;list-style:none;padding:0;margin:0;justify-content:space-between}
-.offer-list li{background:#fff;padding:.85rem 1rem;border-radius:12px;box-shadow:var(--shadow);flex:1;text-align:center}
-.offer-list strong{display:block;font-size:1.05rem;color:var(--accent)}
-
-/* product grid */
-.products{max-width:var(--max-width);margin:2rem auto;padding:0 1rem}
-.products h2{margin:0 0 1rem;font-size:1.2rem}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
-.card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.card-media{height:0;padding-bottom:100%;background-size:cover;background-position:center}
-.card-body{padding:1rem;display:flex;flex-direction:column;gap:.5rem}
-.card-body h3{margin:0;font-size:1rem}
-.price{color:var(--muted);margin-top:auto;font-weight:700}
-
-/* footer */
-.site-footer{margin-top:2.5rem;background:transparent;padding:2rem 1rem;border-top:1px solid rgba(0,0,0,0.04)}
-.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:2rem;flex-wrap:wrap}
-.footer-col{flex:1;min-width:160px}
-.footer-col h4{margin:0 0 .5rem}
-.footer-col a{display:block;color:var(--muted);text-decoration:none;margin:.25rem 0}
-copyright{text-align:center}
-.site-footer .copyright{max-width:var(--max-width);margin:1.5rem auto 0;color:var(--muted);font-size:.9rem;text-align:center}
-
-/* responsive */
-@media(max-width:980px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .main-nav{display:none}
-  .menu-btn{display:inline-block}
-}
-@media(max-width:560px){
-  .grid{grid-template-columns:1fr}
-  .hero{padding:2rem 0}
-  .hero-content{padding:1.25rem}
+.site-header {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+    
 }
 
 
 
-.products {
+
+/* Base logo */
+.logo {
+    display: block;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #000;
+    margin-bottom: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Mirror-flip N */
+.mirrorN {
+    display: inline-block;
+    transform: scaleX(-1);
+    transition: all 0.3s ease;
+}
+
+/* Apply hover effect to BOTH .logo and .mirrorN */
+.logo:hover, 
+.logo:hover .mirrorN {
+    background: linear-gradient(45deg, #d4af37, #f5d76e, #d4af37);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+/* Make menu appear in a row on the next line */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    font-weight: 800;
+}
+
+.main-nav a:hover {
+    color: #000;
+
+}
+
+
+
+
+
+
+
+.fenty-fragrance {
     text-align: center;
     padding: 40px 20px;
+    margin: 0 auto;
     margin-left: -90px;
     margin-right: 10px;
-font-family: "Helvetica Neue", Arial, sans-serif;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.products h1 {
+.fenty-fragrance h1 {
     font-size: 28px;
     margin-bottom: 10px;
 }
 
-.products h4 {
+.fenty-fragrance h4 {
     font-size: 18px;
     margin-bottom: 30px;
     color: #333;
 }
 
-.card-media {
+.fragrance-container {
     display: flex;
-    flex-wrap: wrap;                   /* allows row layout + wrapping */
+    flex-wrap: wrap;               /* like .gift-media */
     justify-content: center;
-    gap: 40px;                         /* spacing between cards */
+    gap: 40px;
     margin-top: 20px;
 }
 
-.card-body {
-    width: 220px;                      /* keeps cards small */
+.fragrance-item {
+    width: 220px;                  /* like .gift-body */
     text-align: center;
     background: #fff;
     padding: 20px;
@@ -159,8 +105,8 @@ font-family: "Helvetica Neue", Arial, sans-serif;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.card-image {
-    width: 180px;                       /* minimize correctly */
+.fragrance-item img.brand-image {
+    width: 180px;                  /* like .gift-image */
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
@@ -168,10 +114,133 @@ font-family: "Helvetica Neue", Arial, sans-serif;
     padding-right: 1px;
 }
 
+.fragrance-item p {
+    color: #444;
+    margin-top: 5px;
+}
 
 
-.price {
-    margin-top: 50px;
+
+
+
+
+
+/* Fenty Hair Section */
+.fenty-hair {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    margin-left: -90px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.fenty-hair h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.fenty-hair h4 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.hair-container {
+    display: flex;
+    flex-wrap: wrap;      /* same layout as fragrance/gifts/makeup */
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.hair-item {
+    width: 220px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hair-item img.brand-image {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding-left: 1%;
+    padding-right: 1px;
+}
+
+.hair-item p {
+    color: #444;
+    margin-top: 5px;
+}
+
+.hair-item .pri {
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+
+/* Fenty Skincare Section */
+.fenty-skincare {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    margin-left: -90px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.fenty-skincare h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.fenty-skincare h4 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skincare-container {
+    display: flex;
+    flex-wrap: wrap;      /* same layout as all other sections */
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.skincare-item {
+    width: 220px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.skincare-item img.brand-image {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding-left: 1%;
+    padding-right: 1px;
+}
+
+.skincare-item p {
+    color: #444;
+    margin-top: 5px;
+}
+
+.skincare-item .pric {
     font-weight: bold;
     color: #000;
 }
@@ -184,11 +253,83 @@ font-family: "Helvetica Neue", Arial, sans-serif;
 
 
 
+
+/*makeup*/
+.makeup-section {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f0eb; /* optional light background */
+    color: #000;
+}
+
+.makeup-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.makeup-section h4 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.makeup-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       /* wrap to next line if needed */
+    gap: 40px;             /* space between items */
+    margin-top: 20px;
+}
+
+.makeup-item {
+    width: 220px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.makeup-item img.brand-image {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.makeup-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.makeup-item p {
+    margin: 5px 0;
+    color: #444;
+}
+
+.makeup-item .prices {
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
 .gifts {
     text-align: center;
     padding: 40px 20px;
+    margin: 0 auto;
     margin-left: -90px;
+    
     margin-right: 10px;
+    margin-top: 10;
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -244,7 +385,7 @@ font-family: "Helvetica Neue", Arial, sans-serif;
 
 
 .fenty-looks-section {
-    padding: 40px 0;
+    padding: 40px 20;
 }
 
 .looks-grid {
