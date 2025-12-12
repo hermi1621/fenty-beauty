@@ -66,7 +66,7 @@ html{
     margin-right: -7px;
     margin-top: 10px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-background-color:rgb(207, 176, 176);
+background-color:whitesmoke;
 }
 
 .fenty-fragrance h1 {
@@ -91,7 +91,7 @@ background-color:rgb(207, 176, 176);
 .fragrance-item {
     width: 220px;                  /* like .gift-body */
     text-align: center;
-    background: #ffffff5b;
+    background:rgb(207, 176, 176) ;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -112,9 +112,7 @@ background-color:rgb(207, 176, 176);
     
 }
 
-
-
-
+/*hair*/
 
 html{
     scroll-behavior: smooth;
@@ -125,10 +123,11 @@ html{
     text-align: center;
     padding: 40px 20px;
     margin: 0 auto;
-    margin-left: -90px;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-top: 5px;
     font-family: "Helvetica Neue", Arial, sans-serif;
+background-color: whitesmoke;
 }
 
 .fenty-hair h1 {
@@ -146,14 +145,14 @@ html{
     display: flex;
     flex-wrap: wrap;      /* same layout as fragrance/gifts/makeup */
     justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 100px;
+    margin-top: 50px;
 }
 
 .hair-item {
     width: 220px;
     text-align: center;
-    background: #fff;
+    background:  rgb(246, 224, 219);
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -178,7 +177,7 @@ html{
     color: #000;
 }
 
-
+/*skincare*/
 
 html{
     scroll-behavior: smooth;
@@ -189,10 +188,11 @@ html{
     text-align: center;
     padding: 40px 20px;
     margin: 0 auto;
-    margin-left: -90px;
-    margin-right: 10px;
+    margin-left: -7px;
+    margin-right: -7px;
     margin-top: 10px;
     font-family: "Helvetica Neue", Arial, sans-serif;
+background-color: whitesmoke;
 }
 
 .fenty-skincare h1 {
@@ -210,16 +210,16 @@ html{
     display: flex;
     flex-wrap: wrap;      /* same layout as all other sections */
     justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 100px;
+    margin-top: 50px;
 }
 
 .skincare-item {
     width: 220px;
     text-align: center;
-    background: #fff;
+    background:rgb(207, 199, 199);
     padding: 20px;
-    border-radius: 18px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -243,28 +243,25 @@ html{
 }
 
 
-
-
-
-
-
-
+/*makeup*/
 html{
     scroll-behavior: smooth;
 }
 
 /*makeup*/
-.makeup-section {
+.fenty-makeup {
     text-align: center;
     padding: 40px 20px;
+    margin-left: -7px;
+    margin-right: -7px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color: #f5f0eb; /* optional light background */
+    background-color:whitesmoke; /* optional light background */
     color: #000;
 }
 
 .makeup-section h1 {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .makeup-section h4 {
@@ -277,16 +274,16 @@ html{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;       /* wrap to next line if needed */
-    gap: 40px;             /* space between items */
-    margin-top: 20px;
+    gap: 100px;             /* space between items */
+    margin-top: 50px;
 }
 
 .makeup-item {
     width: 220px;
     text-align: center;
-    background: #fff;
+    background: rgb(234, 229, 229);
     padding: 20px;
-    border-radius: 18px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
