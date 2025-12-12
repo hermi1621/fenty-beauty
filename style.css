@@ -65,7 +65,9 @@
 
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 .fenty-fragrance {
     text-align: center;
@@ -123,7 +125,9 @@
 
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 /* Fenty Hair Section */
 .fenty-hair {
@@ -185,7 +189,9 @@
 
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 /* Fenty Skincare Section */
 .fenty-skincare {
@@ -252,7 +258,9 @@
 
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 /*makeup*/
 .makeup-section {
@@ -321,7 +329,9 @@
 
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 .gifts {
     text-align: center;
     padding: 40px 20px;
