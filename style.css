@@ -420,30 +420,19 @@ margin-top: 1px;
     }
 }
 
+/* ==========================
+   Skincare 
+========================== */
 
-
-/* Fenty Skincare Section */
 .fenty-skincare {
     text-align: center;
     padding: 40px 20px;
     font-family: "Helvetica Neue", Arial, sans-serif;
     background-color: whitesmoke;
-margin-top: 1px;
+    margin-top: 1px;
 }
 
-/* Section headings */
-.fenty-skincare h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.fenty-skincare h4 {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-/* Optional: Intro for skincare section */
+/* Skincare section intro */
 .skincare-intro {
     text-align: center;
     margin-bottom: 30px;
@@ -463,12 +452,12 @@ margin-top: 1px;
 /* Skincare items container */
 .skincare-container {
     display: flex;
-    flex-wrap: wrap;         /* wrap on desktop */
+    flex-wrap: wrap;         
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
-    overflow-x: visible;     /* no scroll on desktop */
-    padding-left: 20px;      /* side padding for small screens */
+    overflow-x: visible;     
+    padding-left: 20px;      
     padding-right: 20px;
     box-sizing: border-box;
 }
@@ -481,7 +470,7 @@ margin-top: 1px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease; /* smooth hover effect */
+    transition: transform 0.3s ease; 
 }
 
 /* Hover effect for images */
@@ -494,7 +483,7 @@ margin-top: 1px;
 }
 
 .skincare-item img.brand-image:hover {
-    transform: scale(1.05);  /* subtle zoom on hover */
+    transform: scale(1.05);  
 }
 
 /* Bold price values */
@@ -507,26 +496,16 @@ margin-top: 1px;
 /* Responsive: horizontal scroll for small screens */
 @media (max-width: 768px) {
     .skincare-container {
-        flex-wrap: nowrap;          /* no wrapping */
-        overflow-x: auto;           /* horizontal scroll */
-        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+        flex-wrap: nowrap;      
+        overflow-x: auto;           
+        -webkit-overflow-scrolling: touch; 
         gap: 20px;
-        padding-left: 20px;         /* padding to show first item fully */
+        padding-left: 20px;         
         padding-right: 20px;
-        scrollbar-width: thin;
-    }
-
-    .skincare-container::-webkit-scrollbar {
-        height: 6px;
-    }
-
-    .skincare-container::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,0.2);
-        border-radius: 3px;
     }
 
     .skincare-item {
-        flex: 0 0 auto;            /* prevent shrinking */
+        flex: 0 0 auto;            
     }
 }
 
@@ -541,7 +520,11 @@ margin-top: 1px;
 
 
 
-/*makeup*/
+
+
+/* ==========================
+   makeup 
+========================== */
 
 /* Fenty Makeup Section */
 .fenty-makeup {
@@ -581,15 +564,40 @@ margin-top: 1px;
     margin-bottom: 30px;
     color: #333;
 }
+.fenty-makeup {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: whitesmoke;
+    margin-top: 1px;
+    color: #000;
+}
+
+/* Section intro */
+.makeup-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.makeup-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.makeup-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
 
 /* Makeup items container */
 .makeup-container {
     display: flex;
-    flex-wrap: wrap;       /* wrap normally on desktop */
+    flex-wrap: wrap;     
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
-    overflow-x: visible;    /* desktop: no scroll */
+    overflow-x: visible;    
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -603,7 +611,7 @@ margin-top: 1px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease; /* smooth hover */
+    transition: transform 0.3s ease; 
 }
 
 /* Hover effect on images */
@@ -616,7 +624,7 @@ margin-top: 1px;
 }
 
 .makeup-item img.brand-image:hover {
-    transform: scale(1.05); /* subtle zoom */
+    transform: scale(1.05); 
 }
 
 /* Bold price values */
@@ -628,26 +636,16 @@ margin-top: 1px;
 /* Responsive: horizontal scroll for small screens */
 @media (max-width: 768px) {
     .makeup-container {
-        flex-wrap: nowrap;          /* no wrapping */
-        overflow-x: auto;           /* horizontal scroll */
+        flex-wrap: nowrap;         
+        overflow-x: auto;           
         -webkit-overflow-scrolling: touch;
         gap: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        scrollbar-width: thin;
-    }
-
-    .makeup-container::-webkit-scrollbar {
-        height: 6px;
-    }
-
-    .makeup-container::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,0.2);
-        border-radius: 3px;
     }
 
     .makeup-item {
-        flex: 0 0 auto;            /* prevent shrinking */
+        flex: 0 0 auto;            
     }
 }
 
@@ -658,20 +656,9 @@ margin-top: 1px;
         padding-right: 15px;
     }
 }
-
-
-
-
-
-
 /* ==========================
-   gift Container
+   Fenty Gifts Section
 ========================== */
-
-/* Gifts Section */
-html {
-    scroll-behavior: smooth;
-}
 
 .gifts {
     text-align: center;
@@ -696,11 +683,11 @@ html {
 /* Gift items container */
 .gift-media {
     display: flex;
-    flex-wrap: wrap;               /* wrap normally on desktop */
+    flex-wrap: wrap;              
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
-    overflow-x: visible;           /* no scroll on desktop */
+    overflow-x: visible;           
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -716,7 +703,7 @@ html {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* ensures button stays at bottom */
+    justify-content: space-between; 
     transition: transform 0.3s ease;
 }
 
@@ -726,13 +713,11 @@ html {
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
-    padding-left: 1%;
-    padding-right: 1px;
     transition: transform 0.3s ease;
 }
 
 .gift-image:hover {
-    transform: scale(1.05); /* subtle zoom */
+    transform: scale(1.05);
 }
 
 /* Gift text */
@@ -743,48 +728,39 @@ html {
 
 /* SHOP NOW button */
 .shop-btn {
-    background-color: #000;        /* black background */
-    color: #fff;                   /* white text */
-    border: none;                  /* remove default border */
-    padding: 10px 20px;            /* button padding */
-    border-radius: 8px;            /* rounded corners */
+    background-color: #000;       
+    color: #fff;                   
+    border: none;                  
+    padding: 10px 20px;           
+    border-radius: 8px;            
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 15px;              /* space from above text */
+    margin-top: 15px;              
 }
 
 /* Hover / Click effect */
 .shop-btn:hover {
-    background-color: #222;        /* light black on hover */
+    background-color: #222;        
 }
+
 .shop-btn:active {
-    background-color: #333;        /* darker shade on click */
+    background-color: #333;        
 }
 
 /* Responsive: horizontal scroll for small screens */
 @media (max-width: 768px) {
     .gift-media {
-        flex-wrap: nowrap;          /* no wrapping */
-        overflow-x: auto;           /* horizontal scroll */
-        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;          
+        overflow-x: auto;           
+        -webkit-overflow-scrolling: touch; 
         gap: 20px;
         padding-left: 20px;
         padding-right: 20px;
-        scrollbar-width: thin;
-    }
-
-    .gift-media::-webkit-scrollbar {
-        height: 6px;
-    }
-
-    .gift-media::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,0.2);
-        border-radius: 3px;
     }
 
     .gift-body {
-        flex: 0 0 auto;            /* prevent shrinking */
+        flex: 0 0 auto;            
     }
 }
 
@@ -795,22 +771,6 @@ html {
         padding-right: 15px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================
    Fenty Brands Section
 ========================== */
@@ -821,19 +781,14 @@ html {
     font-family: "Helvetica Neue", Arial, sans-serif;
     background-color: #d9c2a3;   
     color: #000; 
-    margin-left: -8px;
-    margin-right: -8px;
-        
 }
-
-/* Optional section intro */
 .brands-intro {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.brands-intro h3 {
-    font-size: 22px;
+.brands-intro h2 {
+    font-size: 28px;
     margin-bottom: 5px;
 }
 
@@ -849,8 +804,8 @@ html {
     justify-content: center;
     gap: 100px;
     margin-top: 20px;
-    flex-wrap: wrap;         /* wrap normally on desktop */
-    overflow-x: visible;     /* no scroll on desktop */
+    flex-wrap: wrap;         
+    overflow-x: visible;     
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
@@ -873,14 +828,14 @@ html {
 }
 
 .brand-item .brand-image:hover {
-    transform: scale(1.05); /* subtle zoom on hover */
+    transform: scale(1.05); 
 }
 
 /* Responsive: horizontal scroll for small screens */
 @media (max-width: 768px) {
     .brands-container {
-        flex-wrap: nowrap;       /* prevent wrapping */
-        overflow-x: auto;        /* horizontal scroll auto */
+        flex-wrap: nowrap;       
+        overflow-x: auto;        
         -webkit-overflow-scrolling: touch;
         gap: 20px;
         padding-left: 20px;
@@ -888,7 +843,7 @@ html {
     }
 
     .brand-item {
-        flex: 0 0 auto;          /* prevent shrinking */
+        flex: 0 0 auto;         
     }
 }
 
@@ -899,8 +854,8 @@ html {
         padding-right: 15px;
     }
 
-    .brands-intro h3 {
-        font-size: 20px;
+    .brands-intro h2 {
+        font-size: 22px;
     }
 
     .brands-intro p {
@@ -909,17 +864,13 @@ html {
 }
 
 
-
 /* ==========================
-   Footer Container
+   Footer Section
 ========================== */
 
-.footor-all {
-    margin-top:1px ;
-    margin-left:-8px ;
-    margin-right: -8px;
-    margin-bottom:-8px ;
-
+.footer-all {
+    margin-top: 1px;
+    margin-bottom: 0;
 }
 
 /* Footer Background & Base Text */
@@ -929,6 +880,7 @@ html {
     padding: 40px 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 /* Headings hoverable (Customer Service & About) */
 .footer-section h2 {
     color: #fff;
@@ -936,9 +888,11 @@ html {
     cursor: pointer;
     transition: color 0.3s;
 }
+
 .footer-section h2:hover {
     color: #f9d972; 
 }
+
 /* Paragraphs and links */
 .footer-section p,
 .footer-section a {
@@ -946,10 +900,11 @@ html {
     text-decoration: none;
     transition: color 0.3s;
 }
-/* Links hover golden */
+
 .footer-section a:hover {
     color: #f9d972;
 }
+
 /* Footer Layout: Customer Service + About Side by Side */
 .footer-content {
     display: flex;
@@ -957,46 +912,81 @@ html {
     flex-wrap: wrap; 
     gap: 50px;
 }
+
 /* Customer Service Styling */
 .footer-customer {
     max-width: 400px;
 }
+
 .footer-customer .hours,
 .footer-customer .contact {
     font-weight: 350;
     font-size: 14px;
 }
+
 /* About Section Styling */
 .footer-about {
     max-width: 600px;
 }
+
 /* About Wrapper (Image + Text) */
 .about-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 20px;
 }
+
 /* About Image */
 .about-img {
     width: 150px;
     height: auto;
     border-radius: 20px;
 }
+
 /* About Text */
 .about-text {
     line-height: 1.7;
 }
+
 /* Social Media Links */
 .footer-social {
     margin-top: 30px;
     text-align: center;
 }
+
 .footer-social a {
     margin: 0 10px;
     font-size: 30px;
     color: #fff;
     transition: color 0.3s;
 }
+
 .footer-social a:hover {
     color: #f9d972;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-customer,
+    .footer-about {
+        max-width: 100%;
+    }
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-img {
+        width: 120px;
+    }
+}
+
+
+
+
+
+
