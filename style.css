@@ -1,14 +1,26 @@
-*{box-sizing:border-box}
+/* ==========================
+   GLOBAL
+========================== */
+* {
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
-
+/* ==========================
+   HEADER
+========================== */
 .site-header {
     background: #fff;
     padding: 20px 0;
     text-align: center;
-    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-/* Base logo */
+
 .logo {
     display: block;
     font-size: 40px;
@@ -19,26 +31,23 @@
     transition: all 0.3s ease;
 }
 
-/* Mirror-flip N */
 .mirrorN {
     display: inline-block;
     transform: scaleX(-1);
     transition: all 0.3s ease;
 }
 
-/* Apply hover effect to BOTH .logo and .mirrorN */
 .logo:hover, 
 .logo:hover .mirrorN {
     background: linear-gradient(45deg, #d4af37, #f5d76e, #d4af37);
     -webkit-background-clip: text;
     color: transparent;
 }
-/* Make menu appear in a row on the next line */
+
 .main-nav {
     display: flex;
     justify-content: center;
     gap: 250px;
-    
 }
 
 .main-nav a {
@@ -46,29 +55,154 @@
     font-size: 18px;
     color: #333;
     font-weight: 800;
+    transition: all 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: #000;
-
+    color: #f9d972;
+    font-size: 20px;
 }
+
+/* Responsive for tablets & small screens */
+@media (max-width: 768px) {
+    .main-nav {
+        gap: 20px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+}
+
+/* ==========================
+   BRANDS SECTION
+========================== */
+.fenty-brands {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #d9c2a3;   
+    color: #000; 
+    margin-left: 0;
+    margin-right: 0;    
+}
+
+.brands-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brands-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.brands-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+.brands-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+    flex-wrap: wrap;    
+    overflow-x: visible;  
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.brand-item {
+    width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.brand-item .brand-image {
+    width: 130%;
+    height: auto;
+    border-radius: 100px;
+    transition: transform 0.3s ease;
+}
+
+.brand-item .brand-image:hover {
+    transform: scale(1.05);
+}
+
+/* Horizontal scroll for small screens */
+@media (max-width: 768px) {
+    .brands-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .brand-item {
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-container {
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brands-intro h3 {
+        font-size: 20px;
+    }
+
+    .brands-intro p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
 /*fragrance*/
-
-html{
-    scroll-behavior: smooth;
-}
-
+/* Fenty Fragrance Section */
 .fenty-fragrance {
     text-align: center;
     padding: 40px 20px;
-    margin: 0 auto;
-    margin-left: -7px;
-    margin-right: -7px;
-    margin-top: 10px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-background-color:whitesmoke;
+    background-color: whitesmoke;
 }
 
+/* Section heading */
 .fenty-fragrance h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -80,56 +214,116 @@ background-color:whitesmoke;
     color: #333;
 }
 
+/* Optional: Intro for fragrance section */
+.fragrance-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.fragrance-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.fragrance-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Fragrance items container */
 .fragrance-container {
     display: flex;
-    flex-wrap: wrap;               /* like .gift-media */
+    flex-wrap: wrap;            /* wrap on large screens */
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
+    overflow-x: visible;        /* desktop: no scroll */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
+/* Fragrance item card */
 .fragrance-item {
-    width: 220px;                  /* like .gift-body */
+    width: 220px;
     text-align: center;
-    background:rgb(207, 176, 176) ;
+    background: rgb(207, 176, 176);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* smooth hover effect */
 }
 
+/* Hover image effect */
 .fragrance-item img.brand-image {
-    width: 180px;                  /* like .gift-image */
+    width: 180px;
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
-    padding-left: 1%;
-    padding-right: 1px;
+    transition: transform 0.3s ease;
 }
 
-.fragrance-item pr {
+.fragrance-item img.brand-image:hover {
+    transform: scale(1.05); /* subtle zoom on hover */
+}
+
+/* Bold price values */
+.fragrance-item .pr {
+    font-weight: bold;
     color: #000;
     margin-top: 5px;
-    
 }
 
-/*hair*/
+/* Responsive: horizontal scroll for small screens */
+@media (max-width: 768px) {
+    .fragrance-container {
+        flex-wrap: nowrap;          /* no wrapping */
+        overflow-x: auto;           /* horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+        gap: 20px;
+        padding-left: 20px;         /* side padding to avoid cutting first item */
+        padding-right: 20px;
+        scrollbar-width: thin;
+    }
 
-html{
-    scroll-behavior: smooth;
+    .fragrance-container::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .fragrance-container::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+        border-radius: 3px;
+    }
+
+    .fragrance-item {
+        flex: 0 0 auto;            /* prevent shrinking */
+    }
 }
+
+@media (max-width: 480px) {
+    .fragrance-container {
+        gap: 15px;
+        padding-left: 15px;       /* adjust for smaller screens */
+        padding-right: 15px;
+    }
+}
+
+
+
+
+
 
 /* Fenty Hair Section */
 .fenty-hair {
     text-align: center;
     padding: 40px 20px;
-    margin: 0 auto;
-    margin-left: -7px;
-    margin-right: -7px;
-    margin-top: 5px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-background-color: whitesmoke;
+    background-color: whitesmoke;
+margin-top: 1px;
 }
 
+/* Section headings */
 .fenty-hair h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -141,60 +335,111 @@ background-color: whitesmoke;
     color: #333;
 }
 
+/* Optional: Intro for hair section */
+.hair-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hair-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.hair-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Hair items container */
 .hair-container {
     display: flex;
-    flex-wrap: wrap;      /* same layout as fragrance/gifts/makeup */
+    flex-wrap: wrap;          /* wrap on desktop */
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
+    overflow-x: visible;      /* no scroll on desktop */
+    padding-left: 20px;       /* side padding for small screens */
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
+/* Hair item card */
 .hair-item {
     width: 220px;
     text-align: center;
-    background:  rgb(246, 224, 219);
+    background: rgb(246, 224, 219);
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* smooth hover effect */
 }
 
+/* Hover effect for image */
 .hair-item img.brand-image {
     width: 180px;
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
-    padding-left: 1%;
-    padding-right: 1px;
+    transition: transform 0.3s ease;
 }
 
-.hair-item p {
-    color: #444;
-    margin-top: 5px;
+.hair-item img.brand-image:hover {
+    transform: scale(1.05);  /* subtle zoom on hover */
 }
 
+/* Bold price values */
 .hair-item .pri {
     font-weight: bold;
     color: #000;
+    margin-top: 5px;
 }
 
-/*skincare*/
+/* Responsive: horizontal scroll on smaller screens */
+@media (max-width: 768px) {
+    .hair-container {
+        flex-wrap: nowrap;          /* no wrapping */
+        overflow-x: auto;           /* horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+        gap: 20px;
+        padding-left: 20px;         /* padding to show first item fully */
+        padding-right: 20px;
+        scrollbar-width: thin;
+    }
 
-html{
-    scroll-behavior: smooth;
+    .hair-container::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .hair-container::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+        border-radius: 3px;
+    }
+
+    .hair-item {
+        flex: 0 0 auto;            /* prevent shrinking */
+    }
+}
+
+@media (max-width: 480px) {
+    .hair-container {
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* Fenty Skincare Section */
 .fenty-skincare {
     text-align: center;
     padding: 40px 20px;
-    margin: 0 auto;
-    margin-left: -7px;
-    margin-right: -7px;
-    margin-top: 10px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-background-color: whitesmoke;
+    background-color: whitesmoke;
+margin-top: 1px;
 }
 
+/* Section headings */
 .fenty-skincare h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -206,59 +451,134 @@ background-color: whitesmoke;
     color: #333;
 }
 
+/* Optional: Intro for skincare section */
+.skincare-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skincare-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.skincare-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Skincare items container */
 .skincare-container {
     display: flex;
-    flex-wrap: wrap;      /* same layout as all other sections */
+    flex-wrap: wrap;         /* wrap on desktop */
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
+    overflow-x: visible;     /* no scroll on desktop */
+    padding-left: 20px;      /* side padding for small screens */
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
+/* Skincare item card */
 .skincare-item {
     width: 220px;
     text-align: center;
-    background:rgb(207, 199, 199);
+    background: rgb(207, 199, 199);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* smooth hover effect */
 }
 
+/* Hover effect for images */
 .skincare-item img.brand-image {
     width: 180px;
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
-    padding-left: 1%;
-    padding-right: 1px;
+    transition: transform 0.3s ease;
 }
 
-.skincare-item p {
-    color: #444;
-    margin-top: 5px;
+.skincare-item img.brand-image:hover {
+    transform: scale(1.05);  /* subtle zoom on hover */
 }
 
+/* Bold price values */
 .skincare-item .pric {
     font-weight: bold;
     color: #000;
+    margin-top: 5px;
+}
+
+/* Responsive: horizontal scroll for small screens */
+@media (max-width: 768px) {
+    .skincare-container {
+        flex-wrap: nowrap;          /* no wrapping */
+        overflow-x: auto;           /* horizontal scroll */
+        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+        gap: 20px;
+        padding-left: 20px;         /* padding to show first item fully */
+        padding-right: 20px;
+        scrollbar-width: thin;
+    }
+
+    .skincare-container::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .skincare-container::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+        border-radius: 3px;
+    }
+
+    .skincare-item {
+        flex: 0 0 auto;            /* prevent shrinking */
+    }
+}
+
+@media (max-width: 480px) {
+    .skincare-container {
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 
-/*makeup*/
-html{
-    scroll-behavior: smooth;
-}
+
 
 /*makeup*/
+
+/* Fenty Makeup Section */
 .fenty-makeup {
     text-align: center;
     padding: 40px 20px;
-    margin-left: -7px;
-    margin-right: -7px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color:whitesmoke; /* optional light background */
+    background-color: whitesmoke;
+    margin-top: 1px;
     color: #000;
 }
 
+/* Section intro */
+.makeup-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.makeup-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.makeup-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Section headings */
 .makeup-section h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -270,14 +590,20 @@ html{
     color: #333;
 }
 
+/* Makeup items container */
 .makeup-container {
     display: flex;
+    flex-wrap: wrap;       /* wrap normally on desktop */
     justify-content: center;
-    flex-wrap: wrap;       /* wrap to next line if needed */
-    gap: 100px;             /* space between items */
+    gap: 100px;
     margin-top: 50px;
+    overflow-x: visible;    /* desktop: no scroll */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
+/* Makeup item card */
 .makeup-item {
     width: 220px;
     text-align: center;
@@ -285,52 +611,85 @@ html{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* smooth hover */
 }
 
+/* Hover effect on images */
 .makeup-item img.brand-image {
     width: 180px;
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-.makeup-item h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+.makeup-item img.brand-image:hover {
+    transform: scale(1.05); /* subtle zoom */
 }
 
-.makeup-item p {
-    margin: 5px 0;
-    color: #444;
-}
-
+/* Bold price values */
 .makeup-item .prices {
     font-weight: bold;
     color: #000;
 }
 
+/* Responsive: horizontal scroll for small screens */
+@media (max-width: 768px) {
+    .makeup-container {
+        flex-wrap: nowrap;          /* no wrapping */
+        overflow-x: auto;           /* horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        scrollbar-width: thin;
+    }
+
+    .makeup-container::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .makeup-container::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+        border-radius: 3px;
+    }
+
+    .makeup-item {
+        flex: 0 0 auto;            /* prevent shrinking */
+    }
+}
+
+@media (max-width: 480px) {
+    .makeup-container {
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 
 
 
 
 
+/* ==========================
+   gift Container
+========================== */
 
-/*gift*/
-html{
+/* Gifts Section */
+html {
     scroll-behavior: smooth;
 }
+
 .gifts {
     text-align: center;
     padding: 40px 20px;
-    margin: 0 auto;
-    margin-left: -7px;
-    margin-right: -7px;
-    margin-top: 10;
     font-family: "Helvetica Neue", Arial, sans-serif;
-background-color: whitesmoke;
+    background-color: whitesmoke;
+    margin-top: 1px;
 }
 
+/* Section headings */
 .gifts h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -342,35 +701,107 @@ background-color: whitesmoke;
     color: #333;
 }
 
+/* Gift items container */
 .gift-media {
     display: flex;
-    flex-wrap: wrap;               /* same as .card-media */
+    flex-wrap: wrap;               /* wrap normally on desktop */
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
+    overflow-x: visible;           /* no scroll on desktop */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
+/* Gift item card */
 .gift-body {
-    width: 220px;                  /* same size as .card-body */
+    width: 220px;
     text-align: center;
     background: #fff;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ensures button stays at bottom */
+    transition: transform 0.3s ease;
 }
 
+/* Hover effect on images */
 .gift-image {
-    width: 180px;                  /* same size as .card-image */
+    width: 180px;
     height: auto;
     border-radius: 12px;
     margin-bottom: 10px;
     padding-left: 1%;
     padding-right: 1px;
+    transition: transform 0.3s ease;
 }
 
+.gift-image:hover {
+    transform: scale(1.05); /* subtle zoom */
+}
+
+/* Gift text */
 .gift-body p {
     color: #444;
     margin-top: 5px;
+}
+
+/* SHOP NOW button */
+.shop-btn {
+    background-color: #000;        /* black background */
+    color: #fff;                   /* white text */
+    border: none;                  /* remove default border */
+    padding: 10px 20px;            /* button padding */
+    border-radius: 8px;            /* rounded corners */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;              /* space from above text */
+}
+
+/* Hover / Click effect */
+.shop-btn:hover {
+    background-color: #222;        /* light black on hover */
+}
+.shop-btn:active {
+    background-color: #333;        /* darker shade on click */
+}
+
+/* Responsive: horizontal scroll for small screens */
+@media (max-width: 768px) {
+    .gift-media {
+        flex-wrap: nowrap;          /* no wrapping */
+        overflow-x: auto;           /* horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        scrollbar-width: thin;
+    }
+
+    .gift-media::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .gift-media::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.2);
+        border-radius: 3px;
+    }
+
+    .gift-body {
+        flex: 0 0 auto;            /* prevent shrinking */
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-media {
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 
@@ -389,7 +820,7 @@ background-color: whitesmoke;
 
 
 /* ==========================
-   brand Container
+   Fenty Brands Section
 ========================== */
 
 .fenty-brands {
@@ -399,28 +830,91 @@ background-color: whitesmoke;
     background-color: #d9c2a3;   
     color: #000; 
     margin-left: -8px;
-    margin-right: -8px;    
-         
+    margin-right: -8px;
+        
 }
 
+/* Optional section intro */
+.brands-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brands-intro h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.brands-intro p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Brands container */
 .brands-container {
     display: flex;
-    justify-content: center;  
-    gap: 100px;               
+    justify-content: center;
+    gap: 100px;
     margin-top: 20px;
+    flex-wrap: wrap;         /* wrap normally on desktop */
+    overflow-x: visible;     /* no scroll on desktop */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
+/* Brand item */
 .brand-item {
-    width: 180px;             
+    width: 180px;
     text-align: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
-.brand-image {
-    width: 130%;            
+/* Brand image hover effect */
+.brand-item .brand-image {
+    width: 130%;
     height: auto;
-    border-radius: 100px;    
+    border-radius: 100px;
+    transition: transform 0.3s ease;
 }
 
+.brand-item .brand-image:hover {
+    transform: scale(1.05); /* subtle zoom on hover */
+}
+
+/* Responsive: horizontal scroll for small screens */
+@media (max-width: 768px) {
+    .brands-container {
+        flex-wrap: nowrap;       /* prevent wrapping */
+        overflow-x: auto;        /* horizontal scroll auto */
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .brand-item {
+        flex: 0 0 auto;          /* prevent shrinking */
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-container {
+        gap: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brands-intro h3 {
+        font-size: 20px;
+    }
+
+    .brands-intro p {
+        font-size: 14px;
+    }
+}
 
 
 
@@ -429,7 +923,7 @@ background-color: whitesmoke;
 ========================== */
 
 .footor-all {
-    margin-top:5px ;
+    margin-top:1px ;
     margin-left:-8px ;
     margin-right: -8px;
     margin-bottom:-8px ;
