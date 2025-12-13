@@ -301,13 +301,10 @@ html {
         padding-right: 15px;
     }
 }
+/* =========================
+     HAIR
+========================== */
 
-
-
-
-
-
-/* Fenty Hair Section */
 .fenty-hair {
     text-align: center;
     padding: 40px 20px;
@@ -328,7 +325,7 @@ margin-top: 1px;
     color: #333;
 }
 
-/* Optional: Intro for hair section */
+/* Intro for hair section */
 .hair-intro {
     text-align: center;
     margin-bottom: 30px;
@@ -348,12 +345,12 @@ margin-top: 1px;
 /* Hair items container */
 .hair-container {
     display: flex;
-    flex-wrap: wrap;          /* wrap on desktop */
+    flex-wrap: wrap;          
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
-    overflow-x: visible;      /* no scroll on desktop */
-    padding-left: 20px;       /* side padding for small screens */
+    overflow-x: visible;      
+    padding-left: 20px;       
     padding-right: 20px;
     box-sizing: border-box;
 }
@@ -366,7 +363,7 @@ margin-top: 1px;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease; /* smooth hover effect */
+    transition: transform 0.3s ease;
 }
 
 /* Hover effect for image */
@@ -379,7 +376,7 @@ margin-top: 1px;
 }
 
 .hair-item img.brand-image:hover {
-    transform: scale(1.05);  /* subtle zoom on hover */
+    transform: scale(1.05);  
 }
 
 /* Bold price values */
@@ -392,13 +389,13 @@ margin-top: 1px;
 /* Responsive: horizontal scroll on smaller screens */
 @media (max-width: 768px) {
     .hair-container {
-        flex-wrap: nowrap;          /* no wrapping */
-        overflow-x: auto;           /* horizontal scroll */
-        -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+        flex-wrap: nowrap;        
+        overflow-x: auto;          
+        -webkit-overflow-scrolling: touch; 
         gap: 20px;
-        padding-left: 20px;         /* padding to show first item fully */
+        padding-left: 20px;         
         padding-right: 20px;
-        scrollbar-width: thin;
+
     }
 
     .hair-container::-webkit-scrollbar {
@@ -411,7 +408,7 @@ margin-top: 1px;
     }
 
     .hair-item {
-        flex: 0 0 auto;            /* prevent shrinking */
+        flex: 0 0 auto;            
     }
 }
 
@@ -422,6 +419,8 @@ margin-top: 1px;
         padding-right: 15px;
     }
 }
+
+
 
 /* Fenty Skincare Section */
 .fenty-skincare {
