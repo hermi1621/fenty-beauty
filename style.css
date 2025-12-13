@@ -382,47 +382,25 @@ background-color: whitesmoke;
 
 
 
-.fenty-looks-section {
-    padding: 40px 20;
-}
-
-.looks-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;            /* space between cards */
-    flex-wrap: wrap;      /* allows wrapping on small screens */
-}
-
-.looks-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 0px;
-    text-align: center;
-    width: 400px;         /* card width */
-}
-
-.looks-img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-}
-.looks-card h3 {
-    font-weight: normal;   /* removes bold */
-}
 
 
 
 
 
+
+/* ==========================
+   brand Container
+========================== */
 
 .fenty-brands {
     text-align: center;
     padding: 40px 20px;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color: #d9c2a3;   /* light brown background */
+    background-color: #d9c2a3;   
     color: #000; 
-    margin-left: -6px;
-    margin-right: -6px;                /* make text visible */
+    margin-left: -8px;
+    margin-right: -8px;    
+         
 }
 
 .brands-container {
@@ -444,15 +422,20 @@ background-color: whitesmoke;
 }
 
 
+
+
 /* ==========================
    Footer Container
 ========================== */
+
 .footor-all {
-    margin-top:2px ;
+    margin-top:5px ;
     margin-left:-8px ;
     margin-right: -8px;
     margin-bottom:-8px ;
+
 }
+
 /* Footer Background & Base Text */
 .footer-section {
     background-color: #000;
@@ -477,6 +460,7 @@ background-color: whitesmoke;
     text-decoration: none;
     transition: color 0.3s;
 }
+/* Links hover golden */
 .footer-section a:hover {
     color: #f9d972;
 }
@@ -484,7 +468,7 @@ background-color: whitesmoke;
 .footer-content {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     gap: 50px;
 }
 /* Customer Service Styling */
